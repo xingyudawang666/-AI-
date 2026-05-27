@@ -1,0 +1,10 @@
+{
+  "name": "Gesture Particles",
+  "description": "A visual interactive website that captures real-time hand gestures and responds with dynamic particle effects.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
