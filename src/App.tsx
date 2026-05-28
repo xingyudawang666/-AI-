@@ -484,9 +484,9 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full h-screen bg-[#050508] text-slate-200 font-sans relative overflow-hidden flex flex-col select-none" ref={containerRef}>
+    <div className="w-full h-screen bg-transparent text-slate-200 font-sans relative overflow-hidden flex flex-col select-none" ref={containerRef}>
       {/* Background camera feed for immersive feel */}
-      <video ref={videoRef} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover scale-x-[-1] opacity-20 pointer-events-none z-0 mix-blend-screen" />
+      <video ref={videoRef} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover scale-x-[-1] opacity-100 pointer-events-none z-0" />
 
       {/* Main interaction canvas */}
       <canvas
@@ -496,12 +496,6 @@ export default function App() {
 
       {/* Hidden Recording Canvas */}
       <canvas ref={recordCanvasRef} className="hidden" />
-
-      {/* Glowing Orbs */}
-      <div className="absolute inset-0 pointer-events-none z-0 mix-blend-screen">
-        <div className="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-purple-600/20 rounded-full blur-[100px]"></div>
-      </div>
 
       {/* Toggle UI Button */}
       <button 
